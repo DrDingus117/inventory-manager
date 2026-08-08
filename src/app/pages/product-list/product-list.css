@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  padding: 24px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  margin-right: 8px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background: white;
+  color: #222;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+button:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #333;
+  background: #f0f0f0;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #333;
+}
+
+tr {
+  border-bottom: 1px solid #333;
+}

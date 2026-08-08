@@ -1,0 +1,49 @@
+<h1>➕ Add Product</h1>
+
+<button routerLink="/products">
+  📋 Back to Inventory
+</button>
+
+<br />
+<br />
+
+<div>
+  <label for="product-name">Product Name:</label><br />
+  <input
+    id="product-name"
+    type="text"
+    [(ngModel)]="product.name"
+    name="name"
+    placeholder="Enter product name"
+  />
+</div>
+
+<br />
+
+<div>
+  <label for="product-year">Year:</label><br />
+  <input
+    id="product-year"
+    type="number"
+    [(ngModel)]="product.data!.year"
+    name="year"
+  />
+</div>
+
+<br />
+
+<div>
+  <label for="product-price">Price:</label><br />
+  <input
+    id="product-price"
+    type="number"
+    [(ngModel)]="product.data!.price"
+    name="price"
+  />
+</div>
+
+<br />
+
+<button type="button" (click)="saveProduct()">
+  💾 Save Product
+</button>

@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  padding: 24px;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background: white;
+  color: #222;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+button:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
