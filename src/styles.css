@@ -26,12 +26,29 @@ button {
   cursor: pointer;
 }
 
+input,
+textarea,
+select {
+  background-color: white;
+  color: #111827;
+  border: 2px solid #4b5563;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #9ca3af;
+  border-color: #6b7280;
+}
+
 thead {
-  background-color: #4b5563;
-  color: white;
+  background-color: #374151 !important;
+  color: white !important;
 }
 
 thead th {
-  color: white;
+  background-color: #374151 !important;
+  color: white !important;
 }
-
