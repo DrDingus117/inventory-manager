@@ -18,12 +18,21 @@ export class ProductList implements OnInit {
 
   products: Product[] = [];
 
+  // Tracks whether the API is currently loading products
+  isLoading = false;
+
+  // Stores a message when the API request fails
+  errorMessage = '';
+
   ngOnInit(): void {
     this.loadProducts();
   }
 
   loadProducts(): void {
     console.log('ProductList initialized');
+
+    this.isLoading = true;
+    this.errorMessage = '';
 
     this.productService.getProducts().subscribe({
       next: (data) => {
@@ -33,10 +42,18 @@ export class ProductList implements OnInit {
 
         console.log('Products length:', this.products.length);
 
+        this.isLoading = false;
+
         this.cdr.detectChanges();
       },
       error: (err) => {
         console.error('ERROR', err);
+
+        this.errorMessage = 'Unable to load products. Please try again.';
+
+        this.isLoading = false;
+
+        this.cdr.detectChanges();
       },
     });
   }

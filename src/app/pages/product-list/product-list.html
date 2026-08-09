@@ -1,44 +1,91 @@
-<h1>📦 Inventory List</h1>
-
-<p>Total Products: {{ products.length }}</p>
-
-<button routerLink="/">
-  🏠 Home
-</button>
-
-<button routerLink="/products/new">
+<button
+  routerLink="/products/new"
+  class="border rounded-md p-3 hover:bg-gray-100"
+>
   ➕ Add Product
 </button>
 
-<br />
-<br />
+<button
+  routerLink="/"
+  class="border rounded-md p-3 hover:bg-gray-100"
+>
+  🏠 ⬅️ Back to Home
+</button>
 
-<table border="1" cellpadding="8">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Product Name</th>
-      <th>Price</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
+@if (isLoading) {
 
-  <tbody>
-    @for (product of products; track product.id) {
-      <tr>
-        <td>{{ product.id }}</td>
-        <td>{{ product.name }}</td>
-        <td>${{ product.data?.price ?? 0 }}</td>
-        <td>
-          <button [routerLink]="['/products/edit', product.id]">
-            ✏️ Edit
-          </button>
+  <p aria-live="polite">
+    Loading products...
+  </p>
 
-          <button (click)="deleteProduct(product.id!)">
-            🗑️ Delete
-          </button>
-        </td>
+} @else if (errorMessage) {
+
+  <p class="error" role="alert">
+    {{ errorMessage }}
+  </p>
+
+} @else {
+
+  <p class="mb-4">
+    Total Products: {{ products.length }}
+  </p>
+
+  <table class="w-full border-collapse border">
+
+    <thead>
+      <tr class="bg-gray-100">
+        <th class="border p-3 text-left">ID</th>
+        <th class="border p-3 text-left">Product Name</th>
+        <th class="border p-3 text-left">Price</th>
+        <th class="border p-3 text-left">Actions</th>
       </tr>
-    }
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      @for (product of products; track product.id) {
+
+        <tr>
+          <td class="border p-3">
+            {{ product.id }}
+          </td>
+
+          <td class="border p-3">
+            {{ product.name }}
+          </td>
+
+          <td class="border p-3">
+            ${{ product.data?.price ?? 0 }}
+          </td>
+
+          <td class="border p-3">
+
+            <button
+              [routerLink]="['/products', product.id]"
+              class="border rounded-md p-2 mr-2 hover:bg-gray-100"
+            >
+              👁️ View
+            </button>
+
+            <button
+              [routerLink]="['/products/edit', product.id]"
+              class="border rounded-md p-2 mr-2 hover:bg-gray-100"
+            >
+              ✏️ Edit
+            </button>
+
+            <button
+              (click)="deleteProduct(product.id!)"
+              class="border rounded-md p-2 hover:bg-gray-100"
+            >
+              🗑️ Delete
+            </button>
+
+          </td>
+        </tr>
+
+      }
+    </tbody>
+
+  </table>
+
+}

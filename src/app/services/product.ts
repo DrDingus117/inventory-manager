@@ -12,7 +12,7 @@ export class ProductService {
 
   private apiUrl = 'https://api.restful-api.dev/collections/products/objects';
 
-  private apiKey = 'a571f205-8854-4c42-9950-f6a1475e5b01';
+  private apiKey = 'b8fb6497-6753-4d8f-b70a-d5dbb8839dff';
 
   private headers = new HttpHeaders({
     'x-api-key': this.apiKey,

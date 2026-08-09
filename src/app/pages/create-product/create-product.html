@@ -14,8 +14,23 @@
     type="text"
     [(ngModel)]="product.name"
     name="name"
+    #nameInput="ngModel"
+    required
+    minlength="3"
     placeholder="Enter product name"
   />
+
+  @if (nameInput.invalid && (nameInput.dirty || nameInput.touched)) {
+    <p class="error">
+      @if (nameInput.errors?.['required']) {
+        Name is required.
+      }
+
+      @if (nameInput.errors?.['minlength']) {
+        Name must be at least 3 characters.
+      }
+    </p>
+  }
 </div>
 
 <br />
@@ -44,6 +59,10 @@
 
 <br />
 
-<button type="button" (click)="saveProduct()">
+<button
+  type="button"
+  (click)="saveProduct()"
+  [disabled]="!isFormValid()"
+>
   💾 Save Product
 </button>

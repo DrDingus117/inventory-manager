@@ -4,7 +4,11 @@
 }
 
 h1 {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 div {
@@ -34,6 +38,7 @@ input:focus {
 }
 
 button {
+  margin-right: 8px;
   padding: 10px 18px;
   border: 2px solid #333;
   border-radius: 6px;
@@ -53,7 +58,6 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.message {
+  font-weight: 600;
 }

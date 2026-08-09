@@ -52,3 +52,14 @@ button:focus-visible {
   outline: 3px solid #005fcc;
   outline-offset: 2px;
 }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #b00020;
+  font-weight: 600;
+  margin-top: 6px;
+}

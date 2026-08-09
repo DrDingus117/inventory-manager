@@ -9,19 +9,36 @@
 
 <div>
   <label for="product-name">Product Name:</label><br />
+
   <input
     id="product-name"
     type="text"
     [(ngModel)]="product.name"
     name="name"
+    #nameInput="ngModel"
+    required
+    minlength="3"
     placeholder="Enter product name"
   />
+
+  @if (nameInput.invalid && (nameInput.dirty || nameInput.touched)) {
+    <p class="error">
+      @if (nameInput.errors?.['required']) {
+        Name is required.
+      }
+
+      @if (nameInput.errors?.['minlength']) {
+        Name must be at least 3 characters.
+      }
+    </p>
+  }
 </div>
 
 <br />
 
 <div>
   <label for="product-year">Year:</label><br />
+
   <input
     id="product-year"
     type="number"
@@ -34,6 +51,7 @@
 
 <div>
   <label for="product-price">Price:</label><br />
+
   <input
     id="product-price"
     type="number"
@@ -44,6 +62,10 @@
 
 <br />
 
-<button type="button" (click)="saveChanges()">
+<button
+  type="button"
+  (click)="saveChanges()"
+  [disabled]="!product.name.trim() || product.name.trim().length < 3"
+>
   💾 Save Changes
 </button>

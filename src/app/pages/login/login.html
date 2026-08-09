@@ -1,0 +1,57 @@
+<button
+  routerLink="/products"
+  class="border rounded-md p-3 hover:bg-gray-100"
+>
+  📋 View Inventory
+</button>
+
+<h1>Login</h1>
+
+<p>Enter your account information below.</p>
+
+<div>
+  <label for="username">Username:</label><br />
+
+  <input
+    id="username"
+    type="text"
+    [(ngModel)]="username"
+    name="username"
+    placeholder="Enter username"
+  />
+</div>
+
+<div>
+  <label for="password">Password:</label><br />
+
+  <input
+    id="password"
+    type="password"
+    [(ngModel)]="password"
+    name="password"
+    placeholder="Enter password"
+  />
+</div>
+
+@if (loginMessage) {
+  <p class="message" role="alert">
+    {{ loginMessage }}
+  </p>
+}
+
+<button
+  type="button"
+  (click)="login()"
+  class="border rounded-md p-3 hover:bg-gray-100"
+>
+  🚶‍➡️ Login
+</button>
+
+
+
+<button
+  routerLink="/"
+  class="border rounded-md p-3 hover:bg-gray-100"
+>
+  🏠 ⬅️ Back to Home
+</button>

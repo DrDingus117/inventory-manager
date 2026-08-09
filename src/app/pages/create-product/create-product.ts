@@ -25,7 +25,15 @@ export class CreateProduct {
     },
   };
 
+  isFormValid(): boolean {
+    return this.product.name.trim().length >= 3;
+  }
+
   saveProduct(): void {
+    if (!this.isFormValid()) {
+      return;
+    }
+
     this.productService.createProduct(this.product).subscribe({
       next: (response) => {
         console.log('Product created!', response);
@@ -33,7 +41,6 @@ export class CreateProduct {
 
         alert('Product created successfully!');
 
-        // Go back to the product list
         this.router.navigate(['/products']);
       },
       error: (err) => {
