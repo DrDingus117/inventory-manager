@@ -1,3 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+body {
+  margin: 0;
+  background-color: #111827;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #374151;
+  padding: 16px 24px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+}
+
