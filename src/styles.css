@@ -26,3 +26,12 @@ button {
   cursor: pointer;
 }
 
+thead {
+  background-color: #4b5563;
+  color: white;
+}
+
+thead th {
+  color: white;
+}
+
