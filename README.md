@@ -88,3 +88,9 @@ https://drdingus117.github.io/inventory-manager/
 ## Project Repo
 
 https://github.com/DrDingus117/inventory-manager
+
+## How it runs
+
+I didn't use the local version, but a live version
+
+Just click the deployment tab, and then the recent green checkmark to see the site.
