@@ -94,3 +94,9 @@ https://github.com/DrDingus117/inventory-manager
 I didn't use the local version, but a live version
 
 Just click the deployment tab, and then the recent green checkmark to see the site.
+
+## Example prices
+
+I put Codecademy Plus and Pro at their respective prices with TAX $195.63 for Plus, and 264.59 for Pro
+
+Then I put my favorite game of all time. Sonic Unleashed, with a median price of 16.53 if buying from the XBOX Store.
