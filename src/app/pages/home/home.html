@@ -1,50 +1,133 @@
-<button
-  routerLink="/products"
-  class="border rounded-md p-3 hover:bg-gray-100"
->
-  📋 View Inventory
-</button>
+<div class="min-h-screen bg-slate-950 text-white">
 
-<button
-  routerLink="/login"
-  class="border rounded-md p-3 hover:bg-gray-100"
->
-  🔐 Login
-</button>
+  <!-- Navigation -->
+  <header class="border-b border-slate-800 bg-slate-900">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
-<h1> Inventory Manager</h1>
+      <a
+        routerLink="/"
+        class="text-xl font-bold hover:text-blue-400"
+      >
+        📦 Inventory Manager
+      </a>
 
-<p>
-  Welcome! This application allows users to manage inventory items
-  using an authenticated REST API.
-</p>
+      <div class="flex items-center gap-3">
 
-<hr />
+        <a
+          routerLink="/"
+          class="rounded-lg px-4 py-2 text-sm hover:bg-slate-800"
+        >
+          Dashboard
+        </a>
 
-<h2>What You Can Do</h2>
+        <a
+          routerLink="/products"
+          class="rounded-lg px-4 py-2 text-sm hover:bg-slate-800"
+        >
+          Inventory
+        </a>
 
-<ul>
-  <li>📋 View inventory items</li>
-  <li>➕ Add new inventory items</li>
-  <li>✏️ Edit existing inventory items</li>
-  <li>🗑️ Delete inventory items</li>
-</ul>
+        <a
+          routerLink="/login"
+          class="rounded-lg border border-slate-700 px-4 py-2 text-sm hover:bg-slate-800"
+        >
+          Login
+        </a>
 
-<hr />
+      </div>
 
-<h2>Project Features</h2>
-
-<ul>
-  <li>✅ Angular application</li>
-  <li>✅ Tailwind CSS configured</li>
-  <li>✅ Angular routing</li>
-  <li>✅ Authenticated REST API</li>
-  <li>✅ HTTP Client</li>
-  <li>✅ Full CRUD functionality</li>
-</ul>
-
-<br />
+    </nav>
+  </header>
 
 
+  <!-- Main Dashboard -->
+  <main class="mx-auto max-w-7xl px-6 py-16">
+
+    <section>
+
+      <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-blue-400">
+        Inventory Dashboard
+      </p>
+
+      <h1 class="text-4xl font-bold sm:text-5xl">
+        Welcome to Inventory Manager
+      </h1>
+
+      <p class="mt-4 max-w-2xl text-lg text-slate-400">
+        Manage your inventory items using Angular, Tailwind CSS,
+        and the RESTful API.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+
+        <a
+          routerLink="/products"
+          class="rounded-lg bg-blue-600 px-6 py-3 font-semibold shadow-lg hover:bg-blue-500"
+        >
+          📋 View Inventory
+        </a>
+
+        <a
+          routerLink="/login"
+          class="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 font-semibold hover:bg-slate-800"
+        >
+          🔐 Login
+        </a>
+
+      </div>
+
+    </section>
 
 
+    <!-- Feature Cards -->
+    <section class="mt-12 grid gap-5 md:grid-cols-3">
+
+      <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+        <div class="text-3xl">📋</div>
+
+        <h2 class="mt-4 text-xl font-bold">
+          View Inventory
+        </h2>
+
+        <p class="mt-2 text-sm text-slate-400">
+          Browse inventory items loaded from the public REST API.
+        </p>
+      </div>
+
+
+      <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+        <div class="text-3xl">✏️</div>
+
+        <h2 class="mt-4 text-xl font-bold">
+          Manage Items
+        </h2>
+
+        <p class="mt-2 text-sm text-slate-400">
+          Create and update inventory items through the application.
+        </p>
+      </div>
+
+
+      <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+        <div class="text-3xl">🌐</div>
+
+        <h2 class="mt-4 text-xl font-bold">
+          REST API
+        </h2>
+
+        <p class="mt-2 text-sm text-slate-400">
+          Inventory data is connected to the RESTful API.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-6 text-center text-sm text-slate-500">
+    Angular + Tailwind CSS • Inventory Manager
+  </footer>
+
+</div>

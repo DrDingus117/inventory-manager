@@ -1,59 +1,90 @@
-# InventoryManager
+# Inventory Manager
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.17.
+An Angular inventory management application that uses an authenticated REST API to manage products.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- View inventory products
+- Add new products
+- Edit existing products
+- Delete products
+- View individual product details
+- Display product prices
+- Login page
+- Form validation
+- Loading and error messages
+- Navigation between application pages
+- Responsive styling with Tailwind CSS
+- Dark-themed interface
+- Deployed with GitHub Pages
 
-```bash
-ng serve
-```
+## Technologies Used
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Tailwind CSS
+- Angular HttpClient
+- Angular Router
+- REST API
+- GitHub Pages
 
-## Code scaffolding
+## CRUD Operations
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The application uses the REST API for the four main CRUD operations:
 
-```bash
-ng generate component component-name
-```
+- **Create** — Add a new product
+- **Read** — View the inventory and individual product details
+- **Update** — Edit an existing product
+- **Delete** — Remove a product
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Application Pages
 
-```bash
-ng generate --help
-```
+- **Home** — Introduction and navigation for the application
+- **Inventory List** — Displays available products and their prices
+- **Add Product** — Creates a new product
+- **Edit Product** — Updates an existing product
+- **Product Details** — Displays information about an individual product
+- **Login** — Provides a simple login screen
+- **Not Found** — Displays when an invalid page is requested
 
-## Building
+## API
 
-To build the project run:
+Product information is stored and managed through the REST API instead of only being stored locally in the Angular application.
 
-```bash
-ng build
-```
+The application uses an API key to authenticate requests.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Validation and Error Handling
 
-## Running unit tests
+The application includes basic validation for product forms, including checking required product information and preventing invalid product names.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+The application also provides loading and error messages when working with API requests.
 
-```bash
-ng test
-```
+## Styling
 
-## Running end-to-end tests
+Tailwind CSS is used throughout the application for layout, spacing, buttons, tables, and other interface elements.
 
-For end-to-end (e2e) testing, run:
+The application uses a simple dark theme with a gray header and contrasting form fields and table headings.
 
-```bash
-ng e2e
-```
+## Accessibility
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The application includes:
 
-## Additional Resources
+- Labels associated with form inputs
+- Keyboard-friendly controls
+- Visible focus indicators
+- Clear button labels
+- Consistent spacing and layout
+- Loading messages announced with `aria-live`
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Deployment
+
+The application is deployed using GitHub Pages.
+
+**Live Application:**  
+https://drdingus117.github.io/inventory-manager/
+
+## Project Repo
+
+https://github.com/DrDingus117/inventory-manager
